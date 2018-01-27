@@ -18,7 +18,9 @@ def startGame(withTimer):
         print(p2 + " is going first!")
     sleep(1)
     if withTimer == "y":
-        startTimer()
+        seconds = 0
+        setTimer(seconds)
+        startTimer(seconds)
     print(currentPlayer + " is going first")
     while True:
          raw_input("Press enter when " + currentPlayer + "s turn is done")
@@ -47,7 +49,7 @@ def setTimer(seconds):
     sleep(0.5)
     print("You have set a timer for " + seconds + " seconds")
     sleep(1)
-def startTimer():
+def startTimer(seconds):
     while seconds > 0:
         seconds = seconds - 1
         sleep(1)
